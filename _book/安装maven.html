@@ -1,0 +1,389 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>安装maven · Gitbook使用教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ivan Mao">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="创建maven.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <a target="_blank" href="http://ivanmao.mo.cn/Learning%20Notes/index.html">
+            
+                    
+                    Ivan Mao Learning Book
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Maven
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="安装maven.html">
+            
+                <a href="安装maven.html">
+            
+                    
+                    安装maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="创建maven.html">
+            
+                <a href="创建maven.html">
+            
+                    
+                    创建maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="maven仓库和坐标.html">
+            
+                <a href="maven仓库和坐标.html">
+            
+                    
+                    maven仓库和坐标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="依赖.html">
+            
+                <a href="依赖.html">
+            
+                    
+                    依赖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="生命周期.html">
+            
+                <a href="生命周期.html">
+            
+                    
+                    生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="maven工程的依赖高级特性.html">
+            
+                <a href="maven工程的依赖高级特性.html">
+            
+                    
+                    maven工程的依赖高级特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="build配置.html">
+            
+                <a href="build配置.html">
+            
+                    
+                    build配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >安装maven</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="windows">Windows</h1>
+<h2 id="&#x4E0B;&#x8F7D;&#x5730;&#x5740;"><strong>&#x4E0B;&#x8F7D;&#x5730;&#x5740;</strong></h2>
+<p>maven&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#x5982;&#x4E0B;&#xFF0C;&#x5404;&#x4F4D;&#x8BF7;&#x9009;&#x62E9;&#x5BF9;&#x5E94;&#x7CFB;&#x7EDF;&#x7684;maven&#x7248;&#x672C;&#x8FDB;&#x884C;&#x4E0B;&#x8F7D;&#x3002;</p>
+<p><a href="https://maven.apache.org/download.[cgi](https://so.csdn.net/so/search?q=cgi&amp;spm=1001.2101.3001.7020" target="_blank">https://maven.apache.org/download.[cgi](https://so.csdn.net/so/search?q=cgi&amp;spm=1001.2101.3001.7020</a>)</p>
+<p><img src="img/9.png" style="zoom:75%;"></p>
+<h3 id="&#x89E3;&#x538B;maven&#x5B89;&#x88C5;&#x5305;"><strong>&#x89E3;&#x538B;maven&#x5B89;&#x88C5;&#x5305;</strong></h3>
+<p>maven&#x5B89;&#x88C5;&#x5305;&#x4E0B;&#x8F7D;&#x4E4B;&#x540E;&#xFF0C;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x89E3;&#x538B;&#x3002;&#x89E3;&#x538B;&#x540E;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x5404;&#x6587;&#x4EF6;&#x4F5C;&#x7528;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</p>
+<p><img src="img/10.png" alt=""></p>
+<h2 id="&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;"><strong>&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</strong></h2>
+<p>&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7684;&#x5F88;&#x591A;&#x5F00;&#x53D1;&#x5DE5;&#x5177;&#xFF0C;&#x6BD4;&#x5982;jdk&#x3001;tomcat&#x7B49;&#xFF0C;&#x90FD;&#x662F;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x7684;&#xFF0C;maven&#x4E5F;&#x4E0D;&#x4F8B;&#x5916;&#xFF0C;&#x5176;&#x914D;&#x7F6E;&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;&#x3002;</p>
+<p><strong>1. &#x914D;&#x7F6E;maven&#x73AF;&#x5883;&#x53D8;&#x91CF;</strong></p>
+<p><img src="img/11.png" style="zoom:75%;"></p>
+<p>&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x53EB;&#x505A;&#x201D;MAVEN_HOME&#x201C;&#x7684;&#x7CFB;&#x7EDF;&#x53D8;&#x91CF;&#x540D;&#x79F0;&#xFF0C;&#x503C;&#x662F;maven&#x6587;&#x4EF6;&#x5939;&#x8DEF;&#x5F84;</p>
+<p><img src="img/12.png" style="zoom:75%;"></p>
+<p><strong>2. &#x6D4B;&#x8BD5;maven&#x662F;&#x5426;&#x914D;&#x7F6E;&#x5B8C;&#x6BD5;</strong></p>
+<p>&#x8F93;&#x5165;mvn -v&#x547D;&#x4EE4;&#xFF0C;&#x5982;&#x679C;&#x51FA;&#x73B0;maven&#x7248;&#x672C;&#x53F7;&#xFF0C;&#x5C31;&#x8868;&#x660E;&#x5B89;&#x88C5;&#x6210;&#x529F;&#x3002;</p>
+<h2 id="&#x914D;&#x7F6E;maven"><strong>&#x914D;&#x7F6E;Maven</strong></h2>
+<p><img src="img/13.png" style="zoom:75%;"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Maven">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="创建maven.html" class="navigation navigation-next " aria-label="Next page: 创建maven">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"安装maven","level":"1.2.1","depth":2,"next":{"title":"创建maven","level":"1.2.2","depth":2,"path":"创建maven.md","ref":"创建maven.md","articles":[]},"previous":{"title":"Maven","level":"1.2","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"安装maven","level":"1.2.1","depth":2,"path":"安装maven.md","ref":"安装maven.md","articles":[]},{"title":"创建maven","level":"1.2.2","depth":2,"path":"创建maven.md","ref":"创建maven.md","articles":[]},{"title":"maven仓库和坐标","level":"1.2.3","depth":2,"path":"maven仓库和坐标.md","ref":"maven仓库和坐标.md","articles":[]},{"title":"依赖","level":"1.2.4","depth":2,"path":"依赖.md","ref":"依赖.md","articles":[]},{"title":"生命周期","level":"1.2.5","depth":2,"path":"生命周期.md","ref":"生命周期.md","articles":[]},{"title":"maven工程的依赖高级特性","level":"1.2.6","depth":2,"path":"maven工程的依赖高级特性.md","ref":"maven工程的依赖高级特性.md","articles":[]},{"title":"build配置","level":"1.2.7","depth":2,"path":"build配置.md","ref":"build配置.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","katex","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"img/logo.png"}},"theme":"default","author":"Ivan Mao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook使用教程","language":"zh-hans","gitbook":"*","description":"学习Gitbook时总结的笔记"},"file":{"path":"安装maven.md","mtime":"2023-01-26T03:30:13.082Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-29T12:18:40.471Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

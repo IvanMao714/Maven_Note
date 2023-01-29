@@ -1,0 +1,412 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Maven · Gitbook使用教程</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Ivan Mao">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="安装maven.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <a target="_blank" href="http://ivanmao.mo.cn/Learning%20Notes/index.html">
+            
+                    
+                    Ivan Mao Learning Book
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Maven
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="安装maven.html">
+            
+                <a href="安装maven.html">
+            
+                    
+                    安装maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="创建maven.html">
+            
+                <a href="创建maven.html">
+            
+                    
+                    创建maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="maven仓库和坐标.html">
+            
+                <a href="maven仓库和坐标.html">
+            
+                    
+                    maven仓库和坐标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="依赖.html">
+            
+                <a href="依赖.html">
+            
+                    
+                    依赖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="生命周期.html">
+            
+                <a href="生命周期.html">
+            
+                    
+                    生命周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="maven工程的依赖高级特性.html">
+            
+                <a href="maven工程的依赖高级特性.html">
+            
+                    
+                    maven工程的依赖高级特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="build配置.html">
+            
+                <a href="build配置.html">
+            
+                    
+                    build配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Maven</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <blockquote>
+<p>&#x6458;&#x8981;: &#x539F;&#x521B;&#x51FA;&#x5904; cnblogs.com/hzg110/p/6936101.html &#x300C;&#x5564;&#x9152;&#x5927;&#x6CE1;&#x6CE1;&#x300D;&#x6B22;&#x8FCE;&#x8F6C;&#x8F7D;&#xFF0C;&#x4FDD;&#x7559;&#x6458;&#x8981;&#xFF0C;&#x8C22;&#x8C22;&#xFF01;</p>
+<ul>
+<li><a href="http://www.iocoder.cn/Fight/Maven-most-complete-tutorial-read-must-understand/" target="_blank">&#x4E00;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;Maven&#x8FD9;&#x6837;&#x7684;&#x6784;&#x5EFA;&#x5DE5;&#x5177;&#x3010;why&#x3011;</a></li>
+<li><a href="http://www.iocoder.cn/Fight/Maven-most-complete-tutorial-read-must-understand/" target="_blank">&#x4E8C;&#x3001;maven&#x662F;&#x4EC0;&#x4E48;&#x3010;what&#x3011;</a></li>
+<li><a href="http://www.iocoder.cn/Fight/Maven-most-complete-tutorial-read-must-understand/" target="_blank">&#x4E09;&#x3001;&#x5B89;&#x88C5;maven</a></li>
+<li><a href="http://www.iocoder.cn/Fight/Maven-most-complete-tutorial-read-must-understand/" target="_blank">&#x56DB;&#x3001;&#x7B2C;&#x4E00;&#x4E2A;maven</a></li>
+<li><a href="http://www.iocoder.cn/Fight/Maven-most-complete-tutorial-read-must-understand/" target="_blank">&#x4E94;&#x3001;&#x4ED3;&#x5E93;&#x548C;&#x5750;&#x6807;</a></li>
+<li><a href="http://www.iocoder.cn/Fight/Maven-most-complete-tutorial-read-must-understand/" target="_blank">&#x516D;&#x3001;&#x4F9D;&#x8D56;</a></li>
+<li><a href="http://www.iocoder.cn/Fight/Maven-most-complete-tutorial-read-must-understand/" target="_blank">&#x4E03;&#x3001;&#x751F;&#x547D;&#x5468;&#x671F;&#x3000;&#x3000;</a></li>
+<li><a href="http://www.iocoder.cn/Fight/Maven-most-complete-tutorial-read-must-understand/" target="_blank">&#x516B;&#x3001;Eclipse&#x4E2D;&#x4F7F;&#x7528;maven</a></li>
+<li><a href="http://www.iocoder.cn/Fight/Maven-most-complete-tutorial-read-must-understand/" target="_blank">&#x4E5D;&#x3001;maven&#x5DE5;&#x7A0B;&#x7684;&#x4F9D;&#x8D56;&#x9AD8;&#x7EA7;&#x7279;&#x6027;</a></li>
+<li><a href="http://www.iocoder.cn/Fight/Maven-most-complete-tutorial-read-must-understand/" target="_blank">&#x5341;&#x3001;build&#x914D;&#x7F6E;</a></li>
+</ul>
+</blockquote>
+<h2 id="&#x4F7F;&#x7528;maven&#x7684;&#x539F;&#x56E0;">&#x4F7F;&#x7528;Maven&#x7684;&#x539F;&#x56E0;</h2>
+<p><strong>&#x2460; &#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5DE5;&#x7A0B;</strong></p>
+<p>&#x5982;&#x679C;&#x9879;&#x76EE;&#x975E;&#x5E38;&#x5E9E;&#x5927;&#xFF0C;&#x5C31;&#x4E0D;&#x9002;&#x5408;&#x4F7F;&#x7528;package&#x6765;&#x5212;&#x5206;&#x6A21;&#x5757;&#xFF0C;&#x6700;&#x597D;&#x662F;&#x6BCF;&#x4E00;&#x4E2A;&#x6A21;&#x5757;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x5DE5;&#x7A0B;&#xFF0C;&#x5229;&#x4E8E;&#x5206;&#x5DE5;&#x534F;&#x4F5C;&#x3002;&#x501F;&#x52A9;&#x4E8E;maven&#x5C31;&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x62C6;&#x5206;&#x6210;&#x591A;&#x4E2A;&#x5DE5;&#x7A0B;</p>
+<p><strong>&#x2461; &#x9879;&#x76EE;&#x4E2D;&#x4F7F;&#x7528;jar&#x5305;&#xFF0C;&#x9700;&#x8981;&#x201C;&#x590D;&#x5236;&#x201D;&#x3001;&#x201C;&#x7C98;&#x8D34;&#x201D;&#x9879;&#x76EE;&#x7684;lib&#x4E2D;</strong></p>
+<p>&#x540C;&#x6837;&#x7684;jar&#x5305;&#x91CD;&#x590D;&#x7684;&#x51FA;&#x73B0;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x9879;&#x76EE;&#x5DE5;&#x7A0B;&#x4E2D;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x505A;&#x4E0D;&#x505C;&#x7684;&#x590D;&#x5236;&#x7C98;&#x8D34;&#x7684;&#x91CD;&#x590D;&#x5DE5;&#x4F5C;&#x3002;&#x501F;&#x52A9;&#x4E8E;maven&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;jar&#x5305;&#x4FDD;&#x5B58;&#x5728;&#x201C;&#x4ED3;&#x5E93;&#x201D;&#x4E2D;&#xFF0C;&#x4E0D;&#x7BA1;&#x5728;&#x54EA;&#x4E2A;&#x9879;&#x76EE;&#x53EA;&#x8981;&#x4F7F;&#x7528;&#x5F15;&#x7528;&#x5373;&#x53EF;&#x5C31;&#x884C;&#x3002;</p>
+<p><strong>&#x2462; jar&#x5305;&#x9700;&#x8981;&#x7684;&#x65F6;&#x5019;&#x6BCF;&#x6B21;&#x90FD;&#x8981;&#x81EA;&#x5DF1;&#x51C6;&#x5907;&#x597D;&#x6216;&#x5230;&#x5B98;&#x7F51;&#x4E0B;&#x8F7D;</strong></p>
+<p>&#x501F;&#x52A9;&#x4E8E;maven&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7EDF;&#x4E00;&#x7684;&#x89C4;&#x8303;&#x65B9;&#x5F0F;&#x4E0B;&#x8F7D;jar&#x5305;&#xFF0C;&#x89C4;&#x8303;</p>
+<p><strong>&#x2463; jar&#x5305;&#x7248;&#x672C;&#x4E0D;&#x4E00;&#x81F4;&#x7684;&#x98CE;&#x9669;</strong></p>
+<p>&#x4E0D;&#x540C;&#x7684;&#x9879;&#x76EE;&#x5728;&#x4F7F;&#x7528;jar&#x5305;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x5404;&#x4E2A;&#x9879;&#x76EE;&#x7684;jar&#x5305;&#x7248;&#x672C;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x5BFC;&#x81F4;&#x672A;&#x6267;&#x884C;&#x9519;&#x8BEF;&#x3002;&#x501F;&#x52A9;&#x4E8E;maven&#xFF0C;&#x6240;&#x6709;&#x7684;jar&#x5305;&#x90FD;&#x653E;&#x5728;&#x201C;&#x4ED3;&#x5E93;&#x201D;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x9879;&#x76EE;&#x90FD;&#x4F7F;&#x7528;&#x4ED3;&#x5E93;&#x7684;&#x4E00;&#x4EFD;jar&#x5305;&#x3002;</p>
+<p><strong>&#x2464; &#x4E00;&#x4E2A;jar&#x5305;&#x4F9D;&#x8D56;&#x5176;&#x4ED6;&#x7684;jar&#x5305;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x624B;&#x52A8;&#x7684;&#x52A0;&#x5165;&#x5230;&#x9879;&#x76EE;&#x4E2D;</strong></p>
+<p>FileUpload&#x7EC4;&#x4EF6;-&gt;IO&#x7EC4;&#x4EF6;&#xFF0C;commons-fileupload-1.3.jar&#x4F9D;&#x8D56;&#x4E8E;commons-io-2.0.1.jar</p>
+<p>&#x6781;&#x5927;&#x7684;&#x6D6A;&#x8D39;&#x4E86;&#x6211;&#x4EEC;&#x5BFC;&#x5165;&#x5305;&#x7684;&#x65F6;&#x95F4;&#x6210;&#x672C;&#xFF0C;&#x4E5F;&#x6781;&#x5927;&#x7684;&#x589E;&#x52A0;&#x4E86;&#x5B66;&#x4E60;&#x6210;&#x672C;&#x3002;&#x501F;&#x52A9;&#x4E8E;maven&#xFF0C;&#x5B83;&#x4F1A;&#x81EA;&#x52A8;&#x7684;&#x5C06;&#x4F9D;&#x8D56;&#x7684;jar&#x5305;&#x5BFC;&#x5165;&#x8FDB;&#x6765;&#x3002;</p>
+<h2 id="maven&#x662F;&#x4EC0;&#x4E48;">Maven&#x662F;&#x4EC0;&#x4E48;</h2>
+<p><strong>&#x2460; maven&#x662F;&#x4E00;&#x6B3E;&#x670D;&#x52A1;&#x4E8E;java&#x5E73;&#x53F0;&#x7684;&#x81EA;&#x52A8;&#x5316;&#x6784;&#x5EFA;&#x5DE5;&#x5177;</strong></p>
+<p>make-&gt;Ant-&gt;Maven-&gt;Gradle</p>
+<p>&#x540D;&#x5B57;&#x53EB;&#x6CD5;&#xFF1A;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53EB;&#x59B9;&#x6587;&#x4E5F;&#x53EF;&#x4EE5;&#x53EB;&#x9EA6;&#x6587;&#xFF0C;&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x53EB;&#x5988;&#x6587;&#x7684;&#x3002;</p>
+<p><strong>&#x2461; &#x6784;&#x5EFA;</strong></p>
+<p>&#x6784;&#x5EFA;&#x5B9A;&#x4E49;&#xFF1A;&#x628A;&#x52A8;&#x6001;&#x7684;Web&#x5DE5;&#x7A0B;&#x7ECF;&#x8FC7;&#x7F16;&#x8BD1;&#x5F97;&#x5230;&#x7684;&#x7F16;&#x8BD1;&#x7ED3;&#x679C;&#x90E8;&#x7F72;&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x3002;</p>
+<p>&#x7F16;&#x8BD1;&#xFF1A;java&#x6E90;&#x6587;&#x4EF6;[.java]-&gt;&#x7F16;&#x8BD1;-&gt;Classz&#x5B57;&#x8282;&#x7801;&#x6587;&#x4EF6;[.class]</p>
+<p>&#x90E8;&#x7F72;&#xFF1A;&#x6700;&#x7EC8;&#x5728;sevlet&#x5BB9;&#x5668;&#x4E2D;&#x90E8;&#x7F72;&#x7684;&#x4E0D;&#x662F;&#x52A8;&#x6001;web&#x5DE5;&#x7A0B;&#xFF0C;&#x800C;&#x662F;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x6587;&#x4EF6;</p>
+<p><img src="img/1.png" style="zoom:75%;"></p>
+<p><strong>&#x2462; &#x6784;&#x5EFA;&#x7684;&#x5404;&#x4E2A;&#x73AF;&#x8282;</strong></p>
+<ul>
+<li>&#x6E05;&#x7406;clean&#xFF1A;&#x5C06;&#x4EE5;&#x524D;&#x7F16;&#x8BD1;&#x5F97;&#x5230;&#x7684;&#x65E7;&#x6587;&#x4EF6;class&#x5B57;&#x8282;&#x7801;&#x6587;&#x4EF6;&#x5220;&#x9664;</li>
+<li>&#x7F16;&#x8BD1;compile&#xFF1A;&#x5C06;java&#x6E90;&#x7A0B;&#x5E8F;&#x7F16;&#x8BD1;&#x6210;class&#x5B57;&#x8282;&#x7801;&#x6587;&#x4EF6;</li>
+<li>&#x6D4B;&#x8BD5;test&#xFF1A;&#x81EA;&#x52A8;&#x6D4B;&#x8BD5;&#xFF0C;&#x81EA;&#x52A8;&#x8C03;&#x7528;junit&#x7A0B;&#x5E8F;</li>
+<li>&#x62A5;&#x544A;report&#xFF1A;&#x6D4B;&#x8BD5;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x7684;&#x7ED3;&#x679C;</li>
+<li>&#x6253;&#x5305;package&#xFF1A;&#x52A8;&#x6001;Web&#x5DE5;&#x7A0B;&#x6253;War&#x5305;&#xFF0C;java&#x5DE5;&#x7A0B;&#x6253;jar&#x5305;</li>
+<li>&#x5B89;&#x88C5;install&#xFF1A;Maven&#x7279;&#x5B9A;&#x7684;&#x6982;&#x5FF5;-----&#x5C06;&#x6253;&#x5305;&#x5F97;&#x5230;&#x7684;&#x6587;&#x4EF6;&#x590D;&#x5236;&#x5230;&#x201C;&#x4ED3;&#x5E93;&#x201D;&#x4E2D;&#x7684;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;</li>
+<li>&#x90E8;&#x7F72;deploy&#xFF1A;&#x5C06;&#x52A8;&#x6001;Web&#x5DE5;&#x7A0B;&#x751F;&#x6210;&#x7684;war&#x5305;&#x590D;&#x5236;&#x5230;Servlet&#x5BB9;&#x5668;&#x4E0B;&#xFF0C;&#x4F7F;&#x5176;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;</li>
+</ul>
+<p>&#x8BE6;&#x60C5;&#x8BF7;&#x89C1;&#xFF1A;<a href="https://ivanmao714.github.io/Maven_Note/" target="_blank">Maven_Note</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="安装maven.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 安装maven">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Maven","level":"1.2","depth":1,"next":{"title":"安装maven","level":"1.2.1","depth":2,"path":"安装maven.md","ref":"安装maven.md","articles":[]},"previous":{"title":"Ivan Mao Learning Book","level":"1.1","depth":1,"url":"http://ivanmao.mo.cn/Learning%20Notes/index.html","ref":"http://ivanmao.mo.cn/Learning%20Notes/index.html","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","katex","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 30px; min-height: 30px","url":"img/logo.png"}},"theme":"default","author":"Ivan Mao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Gitbook使用教程","language":"zh-hans","gitbook":"*","description":"学习Gitbook时总结的笔记"},"file":{"path":"README.md","mtime":"2023-01-29T11:52:26.476Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-01-29T12:18:40.471Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
